@@ -1,0 +1,5 @@
+print("Welcome to the world of proramming!")
+print(4)
+print("Hello Python \n")
+print("Hello", 5)
+print("Welcome to", end="*")
