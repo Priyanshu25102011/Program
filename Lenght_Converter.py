@@ -1,0 +1,22 @@
+from tkinter import *
+root = Tk()
+root.title('Length Converter')
+root.geometry('400x200')
+frame = Frame(master=root, height=200, width=300, bg='#d0efff')
+Cm = Label(master=frame, text="Centimeter", bg="#3895D3", fg="white", width=12)
+Meter = Label(master=frame, text="Meter", bg="#3895D3", fg="white", width=12)
+cm_entry = Entry(frame)
+meter_entry = Entry(frame)
+def convert():
+    cm_value = float(cm_entry.get())
+    meter_value = cm_value / 100
+    meter_entry.delete(0, END)
+    meter_entry.insert(0, str(meter_value))
+btn = Button(text="Convert", command=convert, bg="red")
+frame.place(x=20,y=0)
+Cm.place(x=20,y=20)
+cm_entry.place(x=150,y=20)
+Meter.place(x=20,y=80)
+meter_entry.place(x=150,y=80)
+btn.place(x=130,y=140)
+root.mainloop()
